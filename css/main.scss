@@ -1,0 +1,215 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    font-family: 'Neue Hans Kendrick', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #2E3137;
+}
+
+.weight-800{
+    font-weight: 800;
+}
+.weight-400{
+    font-weight: 400;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-dark-green{
+    color: #2E3137;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/*! Font Import Start */
+@font-face {
+    font-family: "Neue Hans Kendrick";
+    src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */
+      url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff2") format("woff2"),
+      /* Super Modern Browsers */
+      url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff") format("woff"),
+      /* Pretty Modern Browsers */
+      url("../fonts/Neue-Hans-Kendrick-ExtraBold.ttf") format("truetype");
+    /* Safari, Android, iOS */
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Neue Hans Kendrick";
+    src: url("../fonts/Neue-Hans-Kendrick-Regular.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/Neue-Hans-Kendrick-Regular.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */
+      url("../fonts/Neue-Hans-Kendrick-Regular.woff2") format("woff2"),
+      /* Super Modern Browsers */
+      url("../fonts/Neue-Hans-Kendrick-Regular.woff") format("woff"),
+      /* Pretty Modern Browsers */
+      url("../fonts/Neue-Hans-Kendrick-Regular.ttf") format("truetype");
+    /* Safari, Android, iOS */
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+.container{
+    max-width: 1200px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-image{
+    height: 62vh;
+    min-height: 500px;
+    width: 100%;
+    position: absolute;
+    background-image: url('/images/bg-hero.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    z-index: -10;
+}
+
+.wave-image{
+    bottom: 0;
+    height: 15vh;
+    min-height: 200px;
+    width: 100%;
+    position: absolute;
+    background-image: url('/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    z-index: -5;
+}
+
+.logo{
+    width: 12rem;
+    height: auto;
+}
+
+.header{
+    padding: 1.25rem 0.75rem;
+}
+
+.card{
+    max-width: 900px;
+    min-width: 80%;
+    min-height: 40vh;
+    margin-top: 3vh;
+    @media only screen and (min-width: 960px) {
+        margin-top: 14vh;
+        min-height: 35vh;
+    }
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    box-shadow: 0 3rem 4rem -2rem rgba( rgb(18, 19, 22), 0.5);
+    backdrop-filter: blur(20px);
+    background-color: rgba( #5acf5a, 0.5);
+    border-top: 0.25rem solid rgba( #fff, 0.05);
+    border-bottom: 0.25rem solid rgba( #000, 0.1);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.social-icon{
+    width: 3rem;
+    height: 3rem;
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+.social-icon:hover{
+    transform: scale(1.2);
+}
+.mt-4{
+    margin-top: 1.25rem;
+}
+
+.mx-2{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.mt-5{
+    margin-top: 2rem;
+}
+
+.m-3{
+    margin: 1rem;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2.5rem;
+    @media only screen and (min-width: 720px) {
+        padding-top: 3rem;
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+.d-md-block{
+    @media only screen and (min-width: 720px) {
+        display: block;
+    }
+}
+
+.discord-icon{
+    height: 5rem;
+    width: 5rem;
+}
+  
+h2{
+    line-height: 2rem;
+}
