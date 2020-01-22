@@ -80,7 +80,7 @@ body {
   min-height: 400px;
   width: 100%;
   position: absolute;
-  background-image: url("/images/bg-hero.svg");
+  background-image: url("../images/bg-hero.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -93,7 +93,7 @@ body {
   min-height: 200px;
   width: 100%;
   position: absolute;
-  background-image: url("/images/wave.svg");
+  background-image: url("../images/wave.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
