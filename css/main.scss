@@ -29,6 +29,10 @@ body{
     color: #282A2E;
 }
 
+.text-green{
+    color: #4cbf4c;
+}
+
 .text-center{
     text-align: center;
 }
@@ -93,7 +97,7 @@ body{
 }
 
 .wave-image{
-    bottom: -10px;
+    bottom: -20px;
     height: 15vh;
     min-height: 200px;
     width: 100%;
@@ -106,7 +110,10 @@ body{
 }
 
 .logo{
-    width: 12rem;
+    width: 11rem;
+    @media only screen and (min-width: 720px) {
+        width: 12rem;
+    }
     height: auto;
     transform: scale(1);
     transition: all 0.2s ease-out;
@@ -116,14 +123,14 @@ body{
 }
 
 .header{
-    padding: 1.25rem 0.75rem;
+    padding: 1.25rem 1rem;
 }
 
 .card{
     max-width: 720px;
     min-width: 70%;
     min-height: 40vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
     @media only screen and (min-width: 960px) {
         margin-top: 16vh;
         min-height: 35vh;
@@ -149,17 +156,27 @@ body{
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .col{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .justify-content-center{
     justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
 }
 
 .social-icon{
@@ -182,6 +199,10 @@ body{
 
 .mt-5{
     margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: 0.5;
 }
 
 .m-3{
@@ -219,4 +240,31 @@ body{
   
 h2{
     line-height: 2rem;
+}
+
+a, a:hover, a:visited, a:focus{
+    text-decoration: none;
+}
+
+.grow-1{
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+.grow-1:hover{
+    transform: scale(1.1);
+}
+
+.grow-2{
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+}
+.grow-2:hover{
+    transform: scale(1.2);
+}
+
+.arrow{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.25rem;
+    margin-bottom: 0.1rem;
 }

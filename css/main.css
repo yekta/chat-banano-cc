@@ -30,6 +30,10 @@ body {
   color: #282A2E;
 }
 
+.text-green {
+  color: #4cbf4c;
+}
+
 .text-center {
   text-align: center;
 }
@@ -88,7 +92,7 @@ body {
 }
 
 .wave-image {
-  bottom: -10px;
+  bottom: -20px;
   height: 15vh;
   min-height: 200px;
   width: 100%;
@@ -101,12 +105,18 @@ body {
 }
 
 .logo {
-  width: 12rem;
+  width: 11rem;
   height: auto;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+@media only screen and (min-width: 720px) {
+  .logo {
+    width: 12rem;
+  }
 }
 
 .logo:hover {
@@ -115,14 +125,14 @@ body {
 }
 
 .header {
-  padding: 1.25rem 0.75rem;
+  padding: 1.25rem 1rem;
 }
 
 .card {
   max-width: 720px;
   min-width: 70%;
   min-height: 40vh;
-  margin-top: 2vh;
+  margin-top: 1vh;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
   padding-left: 1.5rem;
@@ -164,6 +174,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -175,6 +187,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -182,6 +196,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social-icon {
@@ -209,6 +235,10 @@ body {
 
 .mt-5 {
   margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5;
 }
 
 .m-3 {
@@ -257,5 +287,40 @@ body {
 
 h2 {
   line-height: 2rem;
+}
+
+a, a:hover, a:visited, a:focus {
+  text-decoration: none;
+}
+
+.grow-1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.grow-1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.grow-2 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.grow-2:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.25rem;
+  margin-bottom: 0.1rem;
 }
 /*# sourceMappingURL=main.css.map */
