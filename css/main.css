@@ -305,18 +305,6 @@ a, a:hover, a:visited, a:focus {
           transform: scale(1.1);
 }
 
-.grow-2 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-.grow-2:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .arrow {
   width: 1.5rem;
   height: 1.5rem;
