@@ -11,7 +11,7 @@ body {
   font-weight: 500;
   min-height: 100vh;
   width: 100%;
-  background-color: #2E3137;
+  background-color: #282A2E;
 }
 
 .weight-800 {
@@ -26,8 +26,8 @@ body {
   color: #fff;
 }
 
-.text-dark-green {
-  color: #2E3137;
+.text-dark {
+  color: #282A2E;
 }
 
 .text-center {
@@ -139,8 +139,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 3rem 4rem -2rem rgba(18, 19, 22, 0.5);
-          box-shadow: 0 3rem 4rem -2rem rgba(18, 19, 22, 0.5);
+  -webkit-box-shadow: 0 3rem 4rem -2rem rgba(14, 15, 15, 0.7);
+          box-shadow: 0 3rem 4rem -2rem rgba(14, 15, 15, 0.7);
   background-origin: center;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
