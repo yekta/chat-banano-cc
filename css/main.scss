@@ -87,8 +87,9 @@ body{
 .hero-image{
     height: 65vh;
     min-height: 400px;
-    width: 100%;
+    width: 100vw;
     position: absolute;
+    overflow: hidden;
     background-image: url('../images/bg-hero.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,7 +101,7 @@ body{
     bottom: -20px;
     height: 15vh;
     min-height: 200px;
-    width: 100%;
+    width: 102%;
     position: absolute;
     background-image: url('../images/wave.svg');
     background-repeat: no-repeat;
@@ -127,12 +128,14 @@ body{
 }
 
 .card{
-    max-width: 720px;
+    max-width: 100%;
     min-width: 70%;
     min-height: 40vh;
     margin-top: 1vh;
-    @media only screen and (min-width: 960px) {
-        margin-top: 16vh;
+    @media only screen and (min-width: 720px) {
+        max-width: 70%;
+        min-width: 60%;
+        margin-top: 13vh;
         min-height: 35vh;
     }
     padding-top: 1.5rem;
@@ -258,5 +261,4 @@ a, a:hover, a:visited, a:focus{
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 0.25rem;
-    margin-bottom: 0.1rem;
 }
