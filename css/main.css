@@ -134,8 +134,8 @@ body {
   min-width: 70%;
   min-height: 40vh;
   margin-top: 1vh;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: -webkit-box;
@@ -166,6 +166,8 @@ body {
     min-width: 60%;
     margin-top: 13vh;
     min-height: 35vh;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -288,8 +290,26 @@ body {
   margin: 0.5rem;
 }
 
+h1 {
+  font-size: 1.75rem;
+}
+
+@media only screen and (min-width: 720px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 h2 {
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (min-width: 720px) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 a, a:hover, a:visited, a:focus {
