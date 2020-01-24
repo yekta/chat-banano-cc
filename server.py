@@ -1,4 +1,11 @@
-import json
+# Install uvloop
+try:
+	import uvloop
+	uvloop.install()
+except ImportError:
+	print("Couldn't install uvloop, falling back to the slower asyncio event loop")
+
+import rapidjson as json
 import os
 import logging
 import ipaddress
@@ -69,11 +76,11 @@ async def getInvite(request: web.Request):
         'remoteip': get_request_ip(request)
     }
     try:
-        async with ClientSession() as session:
+        async with ClientSession(json_serialize=json.dumps) as session:
             async with session.post('https://www.google.com/recaptcha/api/siteverify', json=request_json, timeout=30) as resp:
                 if resp.status != 200:
                     err_msg = 'Captcha not valid. Please retry.'
-                    resp_json = await resp.json()
+                    resp_json = await resp.json(loads=json.loads)
                     if 'error_codes' in resp_json:
                         err_msg += 'Errors: ' + \
                             ', '.join(resp_json['error_codes'])
@@ -95,9 +102,9 @@ async def getInvite(request: web.Request):
         'Authorization': f'Bot {discord_token}'
     }
     try:
-        async with ClientSession() as session:
+        async with ClientSession(json_serialize=json.dumps) as session:
             async with session.post(f'https://discordapp.com/api/channels/{discord_channel_id}/invites', headers=headers, json=discordParams, timeout=30) as resp:
-                resp_json = await resp.json()
+                resp_json = await resp.json(loads=json.loads)
                 if resp.status < 200 or resp.status >= 400:
                     return web.HTTPInternalServerError(
                         reason=f'Discord returned error {resp.status} {json.dumps(resp_json)}'
@@ -130,7 +137,7 @@ async def init_app():
     root.addHandler(TimedRotatingFileHandler(
         log_file, when="d", interval=1, backupCount=100))
 
-    app = web.Application()
+    app = web.Application(middlewares=[web.normalize_path_middleware()])
     app.add_routes([web.get('/getInvite', getInvite)])  # All requests
 
     return app
