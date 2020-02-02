@@ -69,15 +69,14 @@ async def getInvite(request: web.Request):
         return web.HTTPUnauthorized(
             reason='No captcha specified.'
         )
+        
     # Verify catpcha
-    request_json = {
-        'secret': recaptcha_secret,
-        'response': captcha,
-        'remoteip': get_request_ip(request)
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
     }
     try:
         async with ClientSession(json_serialize=json.dumps) as session:
-            async with session.post('https://www.google.com/recaptcha/api/siteverify', json=request_json, timeout=30) as resp:
+            async with session.post(f'https://www.google.com/recaptcha/api/siteverify?secret={recaptcha_secret}&response={captcha}&remoteip={get_request_ip(request)}', headers=headers, timeout=30) as resp:
                 resp_json = await resp.json(loads=json.loads)
                 error = False
                 if resp.status != 200:
