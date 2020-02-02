@@ -78,15 +78,25 @@ async def getInvite(request: web.Request):
     try:
         async with ClientSession(json_serialize=json.dumps) as session:
             async with session.post('https://www.google.com/recaptcha/api/siteverify', json=request_json, timeout=30) as resp:
+                resp_json = await resp.json(loads=json.loads)
+                error = False
                 if resp.status != 200:
+                    error = True
+                elif 'success' in resp_json:
+                    if not resp_json['success']:
+                        error = True
+                else:
+                    error = True
+
+                if error:
                     err_msg = 'Captcha not valid. Please retry.'
-                    resp_json = await resp.json(loads=json.loads)
                     if 'error_codes' in resp_json:
                         err_msg += 'Errors: ' + \
                             ', '.join(resp_json['error_codes'])
                     return web.HTTPUnauthorized(
                         reason=err_msg
                     )
+
     except Exception:
         log.server_logger.exception()
         return web.HTTPInternalServerError(
