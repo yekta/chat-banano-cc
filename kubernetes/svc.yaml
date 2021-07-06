@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-banano-cc
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8008
+    targetPort: 8008
+    name: api
+  selector:
+    app: chat-banano-cc

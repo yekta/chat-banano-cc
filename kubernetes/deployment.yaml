@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-banano-cc
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat-banano-cc
+  template:
+    metadata:
+      labels:
+        app: chat-banano-cc
+    spec:
+      containers:
+      - name: chat-banano-cc
+        image: replaceme
+        ports:
+        - containerPort: 8008
+          name: api
+        env:
+          - name: RECAPTCHA_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: chat-banano-cc
+                key: recaptcha_secret
+          - name: DISCORD_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: chat-banano-cc
+                key: discord_token
+          - name: DISCORD_CHANNEL_ID
+            value: "416344480820494356"
