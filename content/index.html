@@ -1,153 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BANANO | Chat</title>
+    <meta
+      name="description"
+      content="Join us to chat and have a great time in the jungle."
+    />
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128344253-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="BANANO | Chat" />
+    <meta
+      itemprop="description"
+      content="Join us to chat and have a great time in the jungle."
+    />
+    <meta
+      itemprop="image"
+      content="https://chat.banano.cc/images/preview-chat.png"
+    />
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-128344253-1');
-  </script><!-- Global site tag (gtag.js) - Google Analytics END -->
-  <!-- Google Image -->
-  <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "BANANO",
-            "url": "https://chat.banano.cc",
-            "logo": "https://banano.cc/assets/logo.png"
-        }
-  </script>
+    <!-- Google Image -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "BANANO",
+        "url": "https://chat.banano.cc",
+        "logo": "https://banano.cc/assets/logo.png"
+      }
+    </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BANANO | Chat</title>
-  <meta name="description" content="Join us to chat and have a great time in the jungle.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://chat.banano.cc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BANANO | Chat" />
+    <meta
+      property="og:description"
+      content="Join us to chat and have a great time in the jungle."
+    />
+    <meta
+      property="og:image"
+      content="https://chat.banano.cc/images/preview-chat.png"
+    />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="BANANO | Chat">
-  <meta itemprop="description" content="Join us to chat and have a great time in the jungle.">
-  <meta itemprop="image" content="https://chat.banano.cc/images/preview-chat.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BANANO | Chat" />
+    <meta
+      name="twitter:description"
+      content="Join us to chat and have a great time in the jungle."
+    />
+    <meta
+      name="twitter:image"
+      content="https://chat.banano.cc/images/preview-chat.png"
+    />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://chat.banano.cc">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="BANANO | Chat">
-  <meta property="og:description" content="Join us to chat and have a great time in the jungle.">
-  <meta property="og:image" content="https://chat.banano.cc/images/preview-chat.png">
+    <link href="css/main.min.css" rel="stylesheet" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BANANO | Chat">
-  <meta name="twitter:description" content="Join us to chat and have a great time in the jungle.">
-  <meta name="twitter:image" content="https://chat.banano.cc/images/preview-chat.png">
+    <!-- Favicons and Theme -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#4cbf4b" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4cbf4b" />
+    <meta name="theme-color" content="#4cbf4b" />
 
-  <link href="css/main.min.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  <!-- Favicons and Theme -->
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <meta name="msapplication-TileColor" content="#4cbf4b">
-  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#4cbf4b">
-  <meta name="theme-color" content="#4cbf4b">
+    <!-- Plausible -->
+    <script
+      defer
+      data-domain="chat.banano.cc"
+      src="https://plausible.banano.cc/js/script.outbound-links.js"
+    ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
+  </head>
 
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-
-<body>
-  <!-- Background images -->
-  <div>
-    <div class="hero-image">
-      <div class="wave-image"></div>
-    </div>
-  </div>
-  <!-- Main container -->
-  <div class="container">
-    <div class="header">
-      <div class="row justify-content-between">
-        <a href="/"><img src="images/bananologo.svg" alt="Banano Logo" class="logo"></a>
-        <a class="grow-1" href="https://banano.cc">
-          <div class="row align-items-center">
-            <h3 class="text-dark weight-800">Home</h3>
-            <img class="arrow" src="images/icons/arrow-icon.svg" alt="Arrow">
-          </div>
-        </a>
+  <body>
+    <!-- Background images -->
+    <div>
+      <div class="hero-image">
+        <div class="wave-image"></div>
       </div>
     </div>
-    <div class="mx-2">
-      <div class="card">
-        <div class="col">
-          <div class="row justify-content-center"><img class="discord-icon" src="images/icons/discord-icon.svg"
-              alt="Discord Icon"></div>
-          <h1 class="text-dark text-center weight-800">Join our Discord</h1>
-          <h2 class="weight-400 text-dark text-center">Click the checkbox below to prove<br class="d-none d-md-block">
-            that you are a kind human
-            being:
-          </h2>
-          <div class="row justify-content-center mt-4">
-            <div class="recaptcha">
-              <form id="form" name="form" data-name="Form">
-                <div data-theme="dark" data-sitekey="6Ldpt9EUAAAAAC_EU4hA9HzdW5cHrQ9nh_NxP3ib" data-callback="callback"
-                  class="g-recaptcha g-recaptcha-error g-recaptcha-disabled"></div>
-              </form>
+    <!-- Main container -->
+    <div class="container">
+      <div class="header">
+        <div class="row justify-content-between">
+          <a href="/"
+            ><img src="images/bananologo.svg" alt="Banano Logo" class="logo"
+          /></a>
+          <a class="grow-1" href="https://banano.cc">
+            <div class="row align-items-center">
+              <h3 class="text-dark weight-800">Home</h3>
+              <img
+                class="arrow"
+                src="images/icons/arrow-icon.svg"
+                alt="Arrow"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="mx-2">
+        <div class="card">
+          <div class="col">
+            <div class="row justify-content-center">
+              <img
+                class="discord-icon"
+                src="images/icons/discord-icon.svg"
+                alt="Discord Icon"
+              />
+            </div>
+            <h1 class="text-dark text-center weight-800">Join our Discord</h1>
+            <h2 class="weight-400 text-dark text-center">
+              Click the checkbox below to prove<br class="d-none d-md-block" />
+              that you are a kind human being:
+            </h2>
+            <div class="row justify-content-center mt-4">
+              <div class="recaptcha">
+                <form id="form" name="form" data-name="Form">
+                  <div
+                    data-theme="dark"
+                    data-sitekey="6Ldpt9EUAAAAAC_EU4hA9HzdW5cHrQ9nh_NxP3ib"
+                    data-callback="callback"
+                    class="g-recaptcha g-recaptcha-error g-recaptcha-disabled"
+                  ></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Footer -->
-  <div class="footer mt-5">
-    <div class="col">
-      <div class="row justify-content-center">
-        <a href="https://reddit.com/r/banano" target="_blank"><img class="social-icon m-3"
-            src="images/icons/reddit-icon.svg" alt="Reddit Icon"></a>
-        <a href="https://twitter.com/bananocoin" target="_blank"><img class="social-icon m-3"
-            src="images/icons/twitter-icon.svg" alt="Twitter Icon"></a>
-        <a href="https://t.me/banano_official" target="_blank"><img class="social-icon m-3"
-            src="images/icons/telegram-icon.svg" alt="Telegram Icon"></a>
-        <a href="https://www.instagram.com/bananocurrency" target="_blank"><img class="social-icon m-3"
-            src="images/icons/instagram-icon.svg" alt="Instagram Icon"></a>
-        <a href="https://www.facebook.com/bananocurrency" target="_blank"><img class="social-icon m-3"
-            src="images/icons/facebook-icon.svg" alt="Facebook Icon"></a>
-        <a href="https://medium.com/banano" target="_blank"><img class="social-icon m-3"
-            src="images/icons/medium-icon.svg" alt="Medium Icon"></a>
-        <a href="https://youtube.com/bananopictures" target="_blank"><img class="social-icon m-3"
-            src="images/icons/youtube-icon.svg" alt="Youtube Icon"></a>
-        <a href="https://github.com/bananocoin" target="_blank"><img class="social-icon m-3"
-            src="images/icons/github-icon.svg" alt="Github Icon"></a>
-      </div>
-      <div class="row justify-content-center mt-4">
-        <a href="https://banano.cc">
-          <p class="text-center text-green weight-800 grow-1">© 2020, BANANO.</p>
-        </a>
+    <!-- Footer -->
+    <div class="footer mt-5">
+      <div class="col">
+        <div class="row justify-content-center">
+          <a href="https://reddit.com/r/banano" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/reddit-icon.svg"
+              alt="Reddit Icon"
+          /></a>
+          <a href="https://twitter.com/bananocoin" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/twitter-icon.svg"
+              alt="Twitter Icon"
+          /></a>
+          <a href="https://t.me/banano_official" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/telegram-icon.svg"
+              alt="Telegram Icon"
+          /></a>
+          <a href="https://www.instagram.com/bananocurrency" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/instagram-icon.svg"
+              alt="Instagram Icon"
+          /></a>
+          <a href="https://www.facebook.com/bananocurrency" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/facebook-icon.svg"
+              alt="Facebook Icon"
+          /></a>
+          <a href="https://medium.com/banano" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/medium-icon.svg"
+              alt="Medium Icon"
+          /></a>
+          <a href="https://youtube.com/bananopictures" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/youtube-icon.svg"
+              alt="Youtube Icon"
+          /></a>
+          <a href="https://github.com/bananocoin" target="_blank"
+            ><img
+              class="social-icon m-3"
+              src="images/icons/github-icon.svg"
+              alt="Github Icon"
+          /></a>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <a href="https://banano.cc">
+            <p class="text-center text-green weight-800 grow-1">
+              © 2020, BANANO.
+            </p>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Callback function for reCAPTHCA -->
-  <script type="text/javascript">
-    function callback(token) {
-      window.location.href = 'https://discordinvite.banano.cc/getInvite?captcha=' + encodeURIComponent(token);
-    }
-  </script>
-</body>
-
+    <!-- Callback function for reCAPTHCA -->
+    <script type="text/javascript">
+      function callback(token) {
+        window.location.href =
+          "https://discordinvite.banano.cc/getInvite?captcha=" +
+          encodeURIComponent(token);
+      }
+    </script>
+  </body>
 </html>
