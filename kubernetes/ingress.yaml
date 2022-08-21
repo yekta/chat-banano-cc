@@ -1,20 +1,24 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: discordapi-banano
+  namespace: banano-discordinvite
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   tls:
-  - hosts:
-    - discordinvite.banano.cc
-    secretName: discordinvite-banano-cc-server-secret
+    - hosts:
+        - discordinvite.banano.cc
+      secretName: discordinvite-banano-cc-server-secret
   rules:
-  - host: discordinvite.banano.cc
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: chat-banano-cc
-          servicePort: 8008
+    - host: discordinvite.banano.cc
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: discordinvite-banano-cc
+                port:
+                  number: 8008
