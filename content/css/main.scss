@@ -6,273 +6,259 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body{
-    font-family: 'Neue Hans Kendrick', sans-serif;
-    font-weight: 500;
-    min-height: 100vh;
-    width: 100%;
-    background-color: #282A2E;
+body {
+  font-family: "Filson Pro", sans-serif;
+  font-weight: 500;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #282a2e;
 }
 
-.weight-800{
-    font-weight: 800;
+.weight-800 {
+  font-weight: 800;
 }
-.weight-400{
-    font-weight: 400;
-}
-
-.text-white{
-    color: #fff;
+.weight-400 {
+  font-weight: 400;
 }
 
-.text-dark{
-    color: #282A2E;
+.text-white {
+  color: #fff;
 }
 
-.text-green{
-    color: #4cbf4c;
+.text-dark {
+  color: #282a2e;
 }
 
-.text-center{
-    text-align: center;
+.text-green {
+  color: #4cbf4c;
 }
 
+.text-center {
+  text-align: center;
+}
 
 /*! Font Import Start */
 @font-face {
-    font-family: "Neue Hans Kendrick";
-    src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot");
-    /* IE9 Compat Modes */
-    src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot?#iefix") format("embedded-opentype"),
-      /* IE6-IE8 */
-      url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff2") format("woff2"),
-      /* Super Modern Browsers */
-      url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff") format("woff"),
-      /* Pretty Modern Browsers */
-      url("../fonts/Neue-Hans-Kendrick-ExtraBold.ttf") format("truetype");
-    /* Safari, Android, iOS */
-    font-weight: 800;
-    font-display: swap;
-    font-style: normal;
+  font-family: "Filson Pro";
+  src: url("../fonts/filson-pro/filson-pro-700.woff2") format("woff2"),
+    url("../fonts/filson-pro-700.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/filson-pro/filson-pro-400.woff2") format("woff2"),
+    url("../fonts/filson-pro/filson-pro-400.woff2") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-image {
+  height: 65vh;
+  min-height: 400px;
+  width: 100vw;
+  position: absolute;
+  overflow: hidden;
+  background-image: url("../images/bg-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  z-index: -10;
+}
+
+.wave-image {
+  bottom: -20px;
+  height: 15vh;
+  min-height: 200px;
+  width: 102%;
+  position: absolute;
+  background-image: url("../images/wave.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  z-index: -5;
+}
+
+.logo {
+  width: 11rem;
+  @media only screen and (min-width: 720px) {
+    width: 12rem;
   }
-  
-  @font-face {
-    font-family: "Neue Hans Kendrick";
-    src: url("../fonts/Neue-Hans-Kendrick-Regular.eot");
-    /* IE9 Compat Modes */
-    src: url("../fonts/Neue-Hans-Kendrick-Regular.eot?#iefix") format("embedded-opentype"),
-      /* IE6-IE8 */
-      url("../fonts/Neue-Hans-Kendrick-Regular.woff2") format("woff2"),
-      /* Super Modern Browsers */
-      url("../fonts/Neue-Hans-Kendrick-Regular.woff") format("woff"),
-      /* Pretty Modern Browsers */
-      url("../fonts/Neue-Hans-Kendrick-Regular.ttf") format("truetype");
-    /* Safari, Android, iOS */
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
+  height: auto;
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+.logo:hover {
+  transform: scale(1.075);
+}
+
+.header {
+  padding: 1.25rem 1rem;
+}
+
+.card {
+  max-width: 100%;
+  min-width: 70%;
+  min-height: 40vh;
+  margin-top: 1vh;
+  @media only screen and (min-width: 720px) {
+    max-width: 70%;
+    min-width: 60%;
+    margin-top: 13vh;
+    min-height: 35vh;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
   }
-
-.container{
-    max-width: 1200px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  box-shadow: 0 3rem 4rem -2rem rgba(rgb(14, 15, 15), 0.7);
+  background-origin: center;
+  backdrop-filter: blur(20px);
+  background-color: rgba(#5acf5a, 0.5);
+  border-top: 0.25rem solid rgba(#fff, 0.05);
+  border-bottom: 0.25rem solid rgba(#000, 0.1);
 }
 
-.hero-image{
-    height: 65vh;
-    min-height: 400px;
-    width: 100vw;
-    position: absolute;
-    overflow: hidden;
-    background-image: url('../images/bg-hero.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    z-index: -10;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.wave-image{
-    bottom: -20px;
-    height: 15vh;
-    min-height: 200px;
-    width: 102%;
-    position: absolute;
-    background-image: url('../images/wave.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    z-index: -5;
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.logo{
-    width: 11rem;
-    @media only screen and (min-width: 720px) {
-        width: 12rem;
-    }
-    height: auto;
-    transform: scale(1);
-    transition: all 0.2s ease-out;
-}
-.logo:hover{
-    transform: scale(1.075);
+.justify-content-center {
+  justify-content: center;
 }
 
-.header{
-    padding: 1.25rem 1rem;
+.justify-content-between {
+  justify-content: space-between;
 }
 
-.card{
-    max-width: 100%;
-    min-width: 70%;
-    min-height: 40vh;
-    margin-top: 1vh;
-    @media only screen and (min-width: 720px) {
-        max-width: 70%;
-        min-width: 60%;
-        margin-top: 13vh;
-        min-height: 35vh;
-        padding-top: 1.5rem;
-        padding-bottom: 3rem;
-    }
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
-    box-shadow: 0 3rem 4rem -2rem rgba( rgb(14, 15, 15), 0.7);
-    background-origin: center;
-    backdrop-filter: blur(20px);
-    background-color: rgba( #5acf5a, 0.5);
-    border-top: 0.25rem solid rgba( #fff, 0.05);
-    border-bottom: 0.25rem solid rgba( #000, 0.1);
+.align-items-center {
+  align-items: center;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.mt-4 {
+  margin-top: 1.25rem;
 }
 
-.col{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
+.mx-2 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
-.justify-content-center{
-    justify-content: center;
+.mt-5 {
+  margin-top: 2rem;
 }
 
-.justify-content-between{
-    justify-content: space-between;
+.mb-1 {
+  margin-bottom: 0.5;
 }
 
-.align-items-center{
-    align-items: center;
+.m-3 {
+  margin: 1rem;
 }
 
-.social-icon{
-    width: 3rem;
-    height: 3rem;
-    transform: scale(1);
-    transition: all 0.2s ease-out;
-}
-.social-icon:hover{
-    transform: scale(1.2);
-}
-.mt-4{
-    margin-top: 1.25rem;
-}
-
-.mx-2{
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2.5rem;
+  @media only screen and (min-width: 720px) {
+    padding-top: 3rem;
+  }
 }
 
-.mt-5{
-    margin-top: 2rem;
+.d-none {
+  display: none;
 }
 
-.mb-1{
-    margin-bottom: 0.5;
+.d-md-block {
+  @media only screen and (min-width: 720px) {
+    display: block;
+  }
 }
 
-.m-3{
-    margin: 1rem;
+.discord-icon {
+  height: 5rem;
+  width: 5rem;
+  margin: 0.5rem;
 }
 
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 2.5rem;
-    @media only screen and (min-width: 720px) {
-        padding-top: 3rem;
-    }
+h1 {
+  font-size: 1.75rem;
+  @media only screen and (min-width: 720px) {
+    font-size: 2rem;
+  }
 }
 
-.d-none{
-    display: none;
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  @media only screen and (min-width: 720px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
-.d-md-block{
-    @media only screen and (min-width: 720px) {
-        display: block;
-    }
+a,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 
-.discord-icon{
-    height: 5rem;
-    width: 5rem;
-    margin: 0.5rem;
+.grow-1 {
+  transform: scale(1);
+  transition: all 0.2s ease-out;
+}
+.grow-1:hover {
+  transform: scale(1.1);
 }
 
-h1{
-    font-size: 1.75rem;
-    @media only screen and (min-width: 720px) {
-        font-size: 2rem;
-    }
-}
-  
-h2{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    @media only screen and (min-width: 720px) {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-}
-
-a, a:hover, a:visited, a:focus{
-    text-decoration: none;
-}
-
-.grow-1{
-    transform: scale(1);
-    transition: all 0.2s ease-out;
-}
-.grow-1:hover{
-    transform: scale(1.1);
-}
-
-.arrow{
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 0.25rem;
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.25rem;
 }

@@ -7,11 +7,11 @@
 }
 
 body {
-  font-family: 'Neue Hans Kendrick', sans-serif;
+  font-family: "Filson Pro", sans-serif;
   font-weight: 500;
   min-height: 100vh;
   width: 100%;
-  background-color: #282A2E;
+  background-color: #282a2e;
 }
 
 .weight-800 {
@@ -27,7 +27,7 @@ body {
 }
 
 .text-dark {
-  color: #282A2E;
+  color: #282a2e;
 }
 
 .text-green {
@@ -40,43 +40,28 @@ body {
 
 /*! Font Import Start */
 @font-face {
-  font-family: "Neue Hans Kendrick";
-  src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Neue-Hans-Kendrick-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff2") format("woff2"), url("../fonts/Neue-Hans-Kendrick-ExtraBold.woff") format("woff"), url("../fonts/Neue-Hans-Kendrick-ExtraBold.ttf") format("truetype");
-  /* Safari, Android, iOS */
+  font-family: "Filson Pro";
+  src: url("../fonts/filson-pro/filson-pro-700.woff2") format("woff2"), url("../fonts/filson-pro-700.woff") format("woff");
   font-weight: 800;
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Neue Hans Kendrick";
-  src: url("../fonts/Neue-Hans-Kendrick-Regular.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Neue-Hans-Kendrick-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Neue-Hans-Kendrick-Regular.woff2") format("woff2"), url("../fonts/Neue-Hans-Kendrick-Regular.woff") format("woff"), url("../fonts/Neue-Hans-Kendrick-Regular.ttf") format("truetype");
-  /* Safari, Android, iOS */
+  font-family: "Filson Pro";
+  src: url("../fonts/filson-pro/filson-pro-400.woff2") format("woff2"), url("../fonts/filson-pro/filson-pro-400.woff2") format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
-
 .container {
   max-width: 1200px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .hero-image {
@@ -108,12 +93,9 @@ body {
 .logo {
   width: 11rem;
   height: auto;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.2s ease-out;
+  transform: scale(1);
   transition: all 0.2s ease-out;
 }
-
 @media only screen and (min-width: 720px) {
   .logo {
     width: 12rem;
@@ -121,8 +103,7 @@ body {
 }
 
 .logo:hover {
-  -webkit-transform: scale(1.075);
-          transform: scale(1.075);
+  transform: scale(1.075);
 }
 
 .header {
@@ -138,28 +119,19 @@ body {
   padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 3rem 4rem -2rem rgba(14, 15, 15, 0.7);
-          box-shadow: 0 3rem 4rem -2rem rgba(14, 15, 15, 0.7);
+  box-shadow: 0 3rem 4rem -2rem rgba(14, 15, 15, 0.7);
   background-origin: center;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background-color: rgba(90, 207, 90, 0.5);
   border-top: 0.25rem solid rgba(255, 255, 255, 0.05);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.1);
 }
-
 @media only screen and (min-width: 720px) {
   .card {
     max-width: 70%;
@@ -172,61 +144,40 @@ body {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .justify-content-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .justify-content-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .social-icon {
   width: 3rem;
   height: 3rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.2s ease-out;
+  transform: scale(1);
   transition: all 0.2s ease-out;
 }
 
 .social-icon:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .mt-4 {
@@ -251,23 +202,14 @@ body {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2.5rem;
 }
-
 @media only screen and (min-width: 720px) {
   .footer {
     padding-top: 3rem;
@@ -293,7 +235,6 @@ body {
 h1 {
   font-size: 1.75rem;
 }
-
 @media only screen and (min-width: 720px) {
   h1 {
     font-size: 2rem;
@@ -304,7 +245,6 @@ h2 {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-
 @media only screen and (min-width: 720px) {
   h2 {
     font-size: 1.5rem;
@@ -312,20 +252,20 @@ h2 {
   }
 }
 
-a, a:hover, a:visited, a:focus {
+a,
+a:hover,
+a:visited,
+a:focus {
   text-decoration: none;
 }
 
 .grow-1 {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.2s ease-out;
+  transform: scale(1);
   transition: all 0.2s ease-out;
 }
 
 .grow-1:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .arrow {
@@ -333,4 +273,3 @@ a, a:hover, a:visited, a:focus {
   height: 1.5rem;
   margin-left: 0.25rem;
 }
-/*# sourceMappingURL=main.css.map */
