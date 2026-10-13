@@ -130,7 +130,8 @@ async def getInvite(request: web.Request):
         )
     return web.HTTPFound(location=f'https://discord.gg/{invite_code}')
 
-loop = asyncio.get_event_loop()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 
 
 async def init_app():
